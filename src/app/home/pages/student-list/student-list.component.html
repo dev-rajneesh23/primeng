@@ -1,0 +1,32 @@
+<div class="surface-card">
+<p-table [value]="Student" [rows]="5" [paginator]="true">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>key</th>
+            <th>student id</th>
+            <th>Student name</th>
+            <th>Student profile</th>
+            <th>mobile number</th>
+            <th>email</th>
+            <th>address</th>
+            <th>Action</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-Student>
+        <tr >
+            <td>{{Student.$key}}</td>
+            <td>{{Student.student_id}}</td>
+            <td>{{Student.student_name}}</td>
+            <td>{{Student.student_profile}}</td>
+            <td>{{Student.mobile}}</td>
+            <td>{{Student.email}}</td>
+            <td>{{Student.address}}</td>
+            <td>
+                <button type="button" pButton class="p-button-help p-button-sm m-1"  routerLink="/edit/{{Student.$key}}" >Update</button>&nbsp;
+                <button type="button" class="p-button-danger p-button-sm m-1"  pButton (click)="deletestudent(Student)"> Delete</button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table><br>
+<button type="button" class="p-button-primary p-button-sm m-1 p-2 " style="float: right;" pButton routerLink="/studentform"> go to Add student</button>
+</div>

@@ -1,0 +1,8 @@
+.student{
+    color: rgb(180, 42, 42); font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  #maindiv{
+   /* float: right; */
+   margin: auto;
+   display: inline-block;
+  }

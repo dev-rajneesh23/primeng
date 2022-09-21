@@ -1,0 +1,25 @@
+
+<div class="surface-card mb-8 ml-2">
+<table class="table table-striped" border="2" >
+    <thead>
+        <tr>
+            <th>s.no.</th>
+            <th>uid</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>photoURL</th>
+            <th>emailVerified</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let signup of authservice.userdata , let in = index">
+            <td>{{in+1}}</td>
+            <td>{{signup.uid}}</td>
+            <td>{{signup.email}}</td>
+            <td>{{signup.phoneNumber}}</td>
+            <td>{{signup.photoURL}}</td>
+            <td>{{signup.emailVerified}}</td>
+        </tr>
+        </tbody>
+</table>
+</div>

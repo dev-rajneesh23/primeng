@@ -1,0 +1,35 @@
+.login-page{
+    background-image:url("https://images.unsplash.com/photo-1497005367839-6e852de72767?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80");
+    height: 964px;
+    width: 100%;
+    margin: 0;
+    padding-top: 200px;
+}
+/* .card-container{
+    margin: auto;
+    background-color: white;
+    height: 400px;
+    width: 400px;
+    padding-top: 0px;
+    padding-left: 50px;
+    
+} */
+.img-login img{
+    height: 80px;
+    width: 80px;
+    
+}
+
+
+.card{
+    /* border: 2px solid red; */
+    height: 965px;
+}
+
+h2{
+    color: white;
+}
+
+.loginpage{
+    background-color: rgb(93, 92, 92);
+}

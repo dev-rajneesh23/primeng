@@ -1,0 +1,52 @@
+#logout{
+    float: left;
+} 
+
+ #sidebar{
+    height: 978px;
+    display:inline-block;
+    
+    
+
+}
+
+.image{
+    display:inline-block;
+
+}
+li{
+   color: white;
+   padding-top: 30px;
+
+}
+li span{
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+}
+li a:hover{
+    background-color: rgb(83, 94, 94);
+    box-shadow: 1px 2px 2px red;
+    margin: 16px;
+    margin-top: 10px;
+    padding: 6px;
+}
+.list{
+    margin: 1px;
+}
+img{
+    height: 100px;
+    width: 233px;
+    margin-left: 4px;
+    margin-top: 1px;
+}
+.list{
+    margin-top: 50px;
+}
+li a{
+    text-decoration: none;
+} 
+
+      #sidebarr{
+        background-color: rgb(7, 7, 109);
+      }

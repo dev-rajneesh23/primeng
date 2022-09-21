@@ -1,0 +1,115 @@
+<!-- <div class="card login-page">
+    <div class=" mt-2 ">
+      <div id="div2" class="flex flex-row flex-wrap card-container white-container justify-content-center ">
+          <div class="flex  align-items-center justify-content-center w-25rem h-25rem bg-black-500 font-bold text-blue border-round m-2 ">
+              <div class="" >
+                  
+                
+                  <div class="loginpage h-32rem w-25rem p-5 ml-8">
+                    <div class="img-login  ml-6">
+                      <img class="ml-3" src="https://img1.wsimg.com/isteam/ip/ad9f9611-18da-4adc-8824-90b6c54786d4/492851_admin_256x256.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:365,h:365,cg:true" alt="">
+                      <h2  class="ml-0" >Sign up page</h2>
+                  </div>
+                <form [formGroup]="signupForm"  (submit)="signup()" #register="ngForm"> 
+                  <div class="field">
+                     <span class="p-float-label">
+                         <input  type="text" pInputText class="p-inputtext" name="username"  formControlName="username" [ngClass]="{'is-invalid':register.submitted && signupForm.get('username')?.invalid}"> 
+                         <label for="float-input">Username</label>
+                         <div class="mt-1" *ngIf="register.submitted && signupForm.get('username')?.invalid || signupForm.get('username')?.invalid && signupForm.get('username')?.touched " style="color: red ;">username is required</div>
+                     </span>
+                  </div>
+                 
+                
+                <br>
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="float-input1" type="email" pInputText class="p-inputtext"  formControlName="email" #email [ngClass]="{'is-invalid':register.submitted && signupForm.get('email')?.invalid}"> 
+                        <label for="float-input1">Email</label>
+                        <div class="mt-1" *ngIf="register.submitted && signupForm.get('email')?.invalid || signupForm.get('email')?.invalid && signupForm.get('email')?.touched " style="color: red ;">email is required</div>
+                        <div *ngIf="signupForm.get('email')?.errors?.['pattern']" style="color: red;">saaddsdd</div>
+                      </span>
+                 </div>
+                <br>
+                <div class="field">
+                    <span class="p-float-label">
+                        <input id="float-input2" type="password" name="password" pInputText class="p-inputtext" formControlName="password" #password [ngClass]="{'is-invalid':register.submitted && signupForm.get('password')?.invalid}"> 
+                        <label for="float-input2">Password</label>
+                        <div class="mt-1" *ngIf="register.submitted && signupForm.get('password')?.invalid || signupForm.get('password')?.invalid && signupForm.get('password')?.touched" style="color: red ;">password is required</div>
+                    </span>
+                 </div>
+                <br>
+                  <div class="field">
+                     <span class="p-float-label">
+                         <input id="float-input3" type="password" pInputText class="p-inputtext " formControlName="confirm_password" [ngClass]="{'is-invalid':register.submitted && signupForm.get('confirm_password')?.invalid}"> 
+                         <label for="float-input3">confirm password</label>
+                         <div class="mt-1" *ngIf="register.submitted && signupForm.get('confirm_password')?.invalid || signupForm.get('confirm_password')?.invalid && signupForm.get('confirm_password')?.touched" style="color: red ;">confirm_password is required</div>
+                     </span>
+                  </div><br>
+                  <div>
+                    <button pButton type="submit"  class="p-button" >Sign-up</button> 
+                  </div> 
+                </form>
+                </div>
+              </div>
+          </div>
+          
+      </div>
+    </div>
+  </div>
+   -->
+   <div class="card login-page">
+    <div class=" mt-2 ">
+      <div id="div2 " class="flex flex-row flex-wrap card-container white-container justify-content-center h-25rem">
+          <div id="div3" class="flex  align-items-center justify-content-center w-25rem h-30rem bg-black-500 font-bold text-white border-round m-2 ">
+              <div class="">
+                  <div class="img-login  ml-8">
+                      <img src="https://img1.wsimg.com/isteam/ip/ad9f9611-18da-4adc-8824-90b6c54786d4/492851_admin_256x256.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:365,h:365,cg:true" alt="">
+                  </div>
+                  
+                  <h2 class="ml-3 " style="color:black;">Sign-up Page</h2>
+                  <form [formGroup]="signupForm"  (submit)="signup()" #register="ngForm"> 
+                    <div class="field">
+                       <span class="p-float-label">
+                           <input  type="text" pInputText class="p-inputtext" name="username"  formControlName="username" [ngClass]="{'is-invalid':register.submitted && signupForm.get('username')?.invalid}"> 
+                           <label for="float-input">Username</label>
+                           <div class="mt-1" *ngIf="register.submitted && signupForm.get('username')?.invalid || signupForm.get('username')?.invalid && signupForm.get('username')?.touched " style="color: red ;">username is required</div>
+                       </span>
+                    </div>
+                   
+                  
+                  <br>
+                  <div class="field">
+                      <span class="p-float-label">
+                          <input id="float-input1" type="email" pInputText class="p-inputtext"  formControlName="email" #email [ngClass]="{'is-invalid':register.submitted && signupForm.get('email')?.invalid}"> 
+                          <label for="float-input1">Email</label>
+                          <div class="mt-1" *ngIf="register.submitted && signupForm.get('email')?.invalid || signupForm.get('email')?.invalid && signupForm.get('email')?.touched " style="color: red ;">email is required</div>
+                          <div *ngIf="signupForm.get('email')?.errors?.['pattern']" style="color: red;">saaddsdd</div>
+                        </span>
+                   </div>
+                  <br>
+                  <div class="field">
+                      <span class="p-float-label">
+                          <input id="float-input2" type="password" name="password" pInputText class="p-inputtext" formControlName="password" #password [ngClass]="{'is-invalid':register.submitted && signupForm.get('password')?.invalid}"> 
+                          <label for="float-input2">Password</label>
+                          <div class="mt-1" *ngIf="register.submitted && signupForm.get('password')?.invalid || signupForm.get('password')?.invalid && signupForm.get('password')?.touched" style="color: red ;">password is required</div>
+                      </span>
+                   </div>
+                  <br>
+                    <div class="field">
+                       <span class="p-float-label">
+                           <input id="float-input3" type="password" pInputText class="p-inputtext " formControlName="confirm_password" [ngClass]="{'is-invalid':register.submitted && signupForm.get('confirm_password')?.invalid}"> 
+                           <label for="float-input3">confirm password</label>
+                           <div class="mt-1" *ngIf="register.submitted && signupForm.get('confirm_password')?.invalid || signupForm.get('confirm_password')?.invalid && signupForm.get('confirm_password')?.touched" style="color: red ;">confirm_password is required</div>
+                       </span>
+                    </div><br>
+                    <div>
+                      <button pButton type="submit"  class="p-button" >Sign-up</button> 
+                    </div> 
+                  </form>
+              </div>
+      
+          </div>
+          
+      </div>
+    </div>
+  </div>

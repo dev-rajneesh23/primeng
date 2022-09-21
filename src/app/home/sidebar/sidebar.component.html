@@ -1,0 +1,32 @@
+
+
+
+<!-- <p-sidebar [(visible)]="authservice1.visibleSidebar1"   > -->
+  <div class=" card   w-15rem " style="background-color: rgb(39, 39, 92);" id="sidebar" *ngIf="authservice1.visibleSidebar1" >
+    <!-- <div class=""> -->
+    <div class="image">
+       <img src="https://static.vecteezy.com/system/resources/thumbnails/008/075/444/small/the-logo-of-home-housing-residents-real-estate-with-a-concept-that-presents-rural-nature-with-a-touch-of-leaves-and-sunflowers-vector.jpg" alt="" >
+    </div>
+    <h3 class="m-5" style="color: white;">Dashboard</h3>
+ 
+ <div class="list ">
+   <ul>
+      <ul >
+    <li class="pi pi-home"><a routerLink="/dashboard/contact" ><i></i> <span>Home</span></a></li><br><br>
+    <li class="pi pi-table"><a routerLink="/studentform" ><i></i> <span>Add Student</span></a></li><br><br>
+    <li class="pi pi-table"><a routerLink="/studentlist" ><i></i> <span>student table</span></a></li><br><br>
+    <li class="pi pi-list"><a routerLink="/dashboard/student"><i></i> <span>signup data</span></a></li><br><br>
+    <li class="pi pi-user"><a routerLink="/contact" ><i></i> <span>Contact</span></a></li><br><br>
+  </ul>
+    </ul>
+ </div>
+   <div>
+  <button type="button" pButton class=" p-button-outlined p-button-help p-2 m-1 ml-4" id="logout" style="color:white; " (click)="authservice1.SignOut()" (click)="authservice1.visibleSidebar1 = false">Log out</button>
+ 
+   </div>
+   </div>
+ <!-- </div> -->
+ 
+<!-- </p-sidebar> -->
+<!-- <p-button type="button" class="mr-2" (click)="authservice1.visibleSidebar1 = true" icon="pi pi-arrow-right"></p-button> -->
+

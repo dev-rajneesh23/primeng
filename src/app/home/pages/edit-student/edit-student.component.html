@@ -1,0 +1,54 @@
+<div class="surface-card p-4 mt-2   shadow-3 border-round w-full lg:w-6" id="maindiv">
+    <div class="text-center mb-5">
+        <img src="https://cdn4.vectorstock.com/i/1000x1000/40/68/student-logo-graduation-logo-vector-29014068.jpg" alt="Image" height="75" class="mb-3">
+        <div class="text-900 text-3xl font-medium mb-3"> Edit and Update student Details</div>
+    </div>
+ <form [formGroup]="editForm" #student="ngForm"  >
+    <div class="formgrid grid ml-1">
+          <div class="field col12 m-1 ">
+             <div class="p-inputgroup">
+                 <input  type="text"  pInputText class="form-control w-27rem mb-3 " placeholder="Student id" formControlName="student_id" [ngClass]="{'is-invalid':student.submitted && editForm.get('student_id')?.invalid }">
+             </div>
+             <div class="student" *ngIf="student.submitted && editForm.get('student_id')?.invalid"  > Student id is required</div>
+
+          </div> 
+        <div class="field col12 m-1">
+            <div class="p-inputgroup ">
+           <input  type="text" pInputText class="form-control w-27rem mb-3" placeholder="Student name" formControlName="student_name" [ngClass]="{'is-invalid':student.submitted && editForm.get('student_name')?.invalid|| editForm.get('student_name')?.touched && editForm.get('student_name')?.invalid}">
+             </div>
+             <div class="student" *ngIf="student.submitted && editForm.get('student_name')?.invalid"> Student name is required</div>
+             <div class="student" *ngIf="editForm.get('student_name')?.errors?.['maxlength']">student name should be less then 8 charecter</div>
+
+        </div>
+        <div class="field col12 m-1">
+            <div class="p-inputgroup mt-2 ">
+                <input  type="text" pInputText class="form-control w-27rem mb-3 " placeholder="Student profile" formControlName="student_profile" [ngClass]="{'is-invalid':student.submitted && editForm.get('student_profile')?.invalid|| editForm.get('student_profile')?.touched && editForm.get('student_profile')?.invalid}">
+            </div>
+            <div class="student" *ngIf="student.submitted && editForm.get('student_profile')?.invalid"> Student name is required</div>
+
+         </div> 
+       <div class="field col12 m-1">
+           <div class="p-inputgroup mt-2">
+          <input  type="text" pInputText class="form-control w-27rem mb-3" placeholder="Mobile number" formControlName="mobile" [ngClass]="{'is-invalid':student.submitted && editForm.get('mobile')?.invalid|| editForm.get('mobile')?.touched && editForm.get('mobile')?.invalid}">
+            </div>
+            <div class="student" *ngIf="student.submitted && editForm.get('mobile')?.invalid"> Student name is required</div>
+
+       </div>
+       <div class="p-inputgroup mt-2">
+        <input  type="text" pInputText class="form-control w-full mb-3" placeholder="Email.........." formControlName="email" [ngClass]="{'is-invalid':student.submitted && editForm.get('email')?.invalid|| editForm.get('email')?.touched && editForm.get('email')?.invalid}">
+          </div>
+        <div class="student" *ngIf="student.submitted && editForm.get('email')?.invalid"> Student name is required</div>
+
+          <div class="p-inputgroup mt-2">
+            <input  type="text" pInputText class="form-control w-full mb-3" placeholder="Address......" formControlName="address" [ngClass]="{'is-invalid':student.submitted && editForm.get('address')?.invalid|| editForm.get('address')?.touched && editForm.get('address')?.invalid}">
+         </div>
+        <div class="student" *ngIf="student.submitted && editForm.get('address')?.invalid"> Student name is required</div>
+
+        </div>
+      <div class="pb-2">
+        <button type="submit" pButton pRipple label="cancel" icon="pi pi-user" class=" w-small ml-1 mt-2 "></button>
+        <button type="submit" pButton pRipple label="Update student" icon="pi pi-user" class="w-27rem ml-1 mt-2 p-button-help" (click)="updateform()"></button>
+    </div>
+     
+ </form>
+</div>
