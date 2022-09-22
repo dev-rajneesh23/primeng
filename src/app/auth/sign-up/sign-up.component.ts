@@ -27,6 +27,7 @@ export class SignUpComponent implements OnInit {
       confirm_password:['', [Validators.required, Validators.maxLength(6)]]
     }),
     {updateOn:'submit'}
+    this.auth.isLoggedin=true;
 
   }
   signup(){

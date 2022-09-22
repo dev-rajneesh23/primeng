@@ -17,7 +17,7 @@ import { StudentComponent } from '../pages/student/student.component';
   declarations: [
     DashboardComponent,
     // SidebarComponent,
-    ContactComponent,
+    // ContactComponent,
     StudentComponent
 
   ],
@@ -29,7 +29,7 @@ import { StudentComponent } from '../pages/student/student.component';
     FormsModule,
     TabViewModule,
     SidebarModule,
-    ButtonModule
+    ButtonModule,
   ]
 })
 export class DashboardModule { }

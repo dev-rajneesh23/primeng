@@ -15,7 +15,7 @@ import { AuthService } from 'src/app/auth/authservice/auth.service';
 export class AddstudentComponent implements OnInit {
   studentFrom!:FormGroup
   id:any
-  constructor(private fb:FormBuilder,public studentservice:StudentService,private toastr:ToastrService, private router:Router,  private actRoute: ActivatedRoute, private location: Location) { }
+  constructor(private fb:FormBuilder,public studentservice:StudentService,private toastr:ToastrService, private router:Router,  private actRoute: ActivatedRoute, private location: Location, public auth:AuthService) { }
 
   ngOnInit(): void {
     

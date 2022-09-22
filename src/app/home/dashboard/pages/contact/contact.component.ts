@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/auth/authservice/auth.service';
+ 
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(public auth:AuthService) { }
 
   ngOnInit(): void {
+    this.auth.visibleSidebar1=false
   }
 
 }

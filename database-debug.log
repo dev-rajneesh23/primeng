@@ -1,0 +1,13 @@
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by io.netty.util.internal.ReflectionUtil (file:/home/dell/.cache/firebase/emulators/firebase-database-emulator-v4.8.0.jar) to field sun.nio.ch.SelectorImpl.selectedKeys
+WARNING: Please consider reporting this to the maintainers of io.netty.util.internal.ReflectionUtil
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+17:34:32.337 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO akka.event.slf4j.Slf4jLogger - Slf4jLogger started
+17:34:32.508 [main] INFO com.firebase.server.forge.App$ - Listening at localhost:9000
+17:34:36.466 [NamespaceSystem-akka.actor.default-dispatcher-6] INFO com.firebase.core.namespace.NamespaceActor - fir-and-primeng-default-rtdb successfully activated FBKV (SurveyIdle(0)) wait: 121ms, init: 0ms
+17:34:36.555 [NamespaceSystem-blocking-namespace-operation-dispatcher-8:fir-and-primeng-default-rtdb$7296208:] INFO com.firebase.core.namespace.StateManager - Namespace fir-and-primeng-default-rtdb status Active to Active
+17:35:05.810 [Thread-0] INFO com.firebase.server.forge.App$ - Attempting graceful shutdown.
+17:35:05.824 [NamespaceSystem-akka.actor.default-dispatcher-7] INFO com.firebase.core.namespace.Terminator$Terminator - 1 actors left to terminate: fir-and-primeng-default-rtdb
+17:35:05.836 [NamespaceSystem-akka.actor.default-dispatcher-5] INFO com.firebase.core.namespace.NamespaceActor - stopped namespace actor for fir-and-primeng-default-rtdb
+17:35:05.850 [Thread-0] INFO com.firebase.server.forge.App$ - Graceful shutdown complete.

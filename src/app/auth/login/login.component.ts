@@ -21,6 +21,7 @@ export class LoginComponent implements OnInit {
    {updateOn:'submit'}
    this.userdata = this.loginFrom;
    this.authservice.visibleSidebar1 =false;
+   this.authservice.isLoggedin=false;
 
   }
     // onsubmit(){

@@ -27,6 +27,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { StudentListComponent } from './home/pages/student-list/student-list.component';
 import {TableModule} from 'primeng/table';
 import { EditStudentComponent } from './home/pages/edit-student/edit-student.component';
+import { LoginComponent } from './auth/login/login.component';
 
 
 
@@ -38,7 +39,8 @@ import { EditStudentComponent } from './home/pages/edit-student/edit-student.com
     SidebarComponent,
     AddstudentComponent,
     StudentListComponent,
-    EditStudentComponent
+    EditStudentComponent,
+    // LoginComponent
   ],
   imports: [
     BrowserModule,
