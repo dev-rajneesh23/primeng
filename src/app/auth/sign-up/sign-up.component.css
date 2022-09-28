@@ -1,6 +1,6 @@
-.login-page{
+.card{
     background-image:url("https://images.unsplash.com/photo-1497005367839-6e852de72767?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80");
-    height: 964px;
+    min-height: 100vh;
     width: 100%;
     margin: 0;
     padding-top: 200px;
@@ -9,7 +9,7 @@
 }
 .containe{
     width: 100%;
-    border: solid red 2px;
+    /* border: solid red 2px; */
 }
 /* .card-container{
     margin: auto;
@@ -27,10 +27,7 @@
 }
 
 
-.card{
-    /* border: 2px solid red; */
-    height: 965px;
-}
+
 
 h2{
     color: white;
@@ -39,3 +36,6 @@ h2{
 .loginpage{
     background-color: rgb(93, 92, 92);
 }
+.mt-1{
+    color: rgb(209, 8, 8); font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }

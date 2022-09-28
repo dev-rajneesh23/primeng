@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../studentservice/student.service';
 import { ToastrService } from 'ngx-toastr';
-import  {Student}   from '../student'
+import  {Student}   from '../student';
+import { Customer, Representative } from '../student';
+
 
 
 @Component({
@@ -10,12 +12,28 @@ import  {Student}   from '../student'
   styleUrls: ['./student-list.component.css']
 })
 export class StudentListComponent implements OnInit {
+
+  // table layout
+  customers!: Student[];
+
+  selectedCustomers!: Student[];
+
+  representatives!: Representative[];
+
+  statuses!: any[];
+
+  loading: boolean = true;
+
+  activityValues: number[] = [0, 100];
+
   // student:any=[];
   p: number = 1;
   Student!: Student[];
   hideWhenNoStudent: boolean = false;
   noData: boolean = false;
   preLoader: boolean = true;
+  page:number=4;
+  pageSize:number=25;
   
   constructor(
     public crudApi: StudentService,

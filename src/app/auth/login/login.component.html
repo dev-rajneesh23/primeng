@@ -29,8 +29,8 @@
     
   </div>
 </div> -->
-<div class="card login-page" *ngIf="authservice.isLoggedin==false" >
-  <div class=" mt-2 ">
+<div class="card login-page h-auto" *ngIf="authservice.isLoggedin==false" >
+  <div class=" mt-6 " >
     <div id="div2" class="flex flex-row flex-wrap card-container white-container justify-content-center ">
         <div class="flex  align-items-center justify-content-center w-25rem h-25rem bg-black-500 font-bold text-white border-round m-2 ">
             <div class="">
@@ -38,13 +38,13 @@
                     <img src="https://img1.wsimg.com/isteam/ip/ad9f9611-18da-4adc-8824-90b6c54786d4/492851_admin_256x256.png/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:365,h:365,cg:true" alt="">
                 </div>
                 
-                <h2 class="ml-8 ">Login Page</h2>
+                <h2 class="ml-7">Login Page</h2><br>
                 <form  [formGroup]="loginFrom"  #login="ngForm">
                 <div class="field">
                    <span class="p-float-label">
                        <input id="float-input" type="text" pInputText class="form-control p-inputtext-lg" name="email" #email formControlName="email" [ngClass]="{'is-invalid':login.submitted && loginFrom.get('email')?.invalid}"> 
                        <label for="float-input">Email</label>
-                       <div *ngIf="login.submitted && loginFrom.get('email')?.invalid"  style="color: red;">email is required</div>
+                       <div  class="input" *ngIf="login.submitted && loginFrom.get('email')?.invalid ||  loginFrom.get('email')?.invalid && loginFrom.get('email')?.touched"  style="color: red;">Email is required</div>
                    </span>
                 </div>
                <br>
@@ -53,7 +53,7 @@
                    <span class="p-float-label">
                        <input id="float-input1" type="password" pInputText class="form-control p-inputtext-lg " #password name="password" formControlName="password" [ngClass]="{'is-invalid':login.submitted && loginFrom.get('password')?.invalid}"> 
                        <label for="float-input1">password</label>
-                       <div *ngIf="login.submitted && loginFrom.get('password')?.invalid" style="color: red;">password is required</div>
+                       <div class="input" *ngIf="login.submitted && loginFrom.get('password')?.invalid ||loginFrom.get('password')?.invalid && loginFrom.get('password')?.touched" style="color: red;">Password is required</div>
 
                    </span>
                 </div>

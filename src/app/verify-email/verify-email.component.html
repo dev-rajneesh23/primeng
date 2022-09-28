@@ -1,7 +1,7 @@
-<div class="card ml-8">
+<div class="card ml-8 mt-8">
 <div class="displayTable">
     <div class="displayTableCell">
-      <div class="authBlock">
+      <div class="authBlock text-center">
         <h3>Thank You for Registering</h3>
         <div class="formGroup" *ngIf="authservice.userdata as user">
           <p class="text-center">We have sent a confirmation email to <strong>{{user.email}}</strong>.</p>
@@ -9,7 +9,7 @@
         </div>
         
         <!-- Calling SendVerificationMail() method using authService Api -->
-        <div class="formGroup">
+        <div class="formGroup text-center">
           <button  pButton type="button"  class="p-button-outlined" (click)="authservice.SendVerificationMail()">
             <i class="fas fa-redo-alt"></i>
             Resend Verification Email
@@ -17,9 +17,9 @@
         </div>
       </div>
       <br>
-      <div class="redirectToLogin">
-        <span >Go back to?<span class="redirect" routerLink="/"> &nbsp; <button pButton type="button"  class="p-button-sm"> Sign in </button></span></span>
-        <a routerLink="/dashboard/student" pButton type="button"  class="p-button-sm">show data</a>
+      <div class="redirectToLogin text-center">
+        <span >Go back to?<span class="redirect" routerLink="/"> &nbsp; <button pButton type="button"  class="p-button-sm"> Sign in </button></span></span> &nbsp;
+        <a routerLink="/dashboard/student" pButton type="button"  class="p-button-sm p-button-help p-2 pl-2 pr-2" style="text-decoration: none;">show data</a>
       </div>
     </div>
   </div>

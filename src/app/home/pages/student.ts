@@ -6,4 +6,14 @@ export interface Student {
     mobile: number
     email: string;
     address:string;
+    representative?: Representative;
+}
+export interface Representative {
+    name?: string;
+    image?: string;
+}
+
+export interface Country {
+    name?: string;
+    code?: string;
 }

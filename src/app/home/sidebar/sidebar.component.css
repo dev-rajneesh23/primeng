@@ -3,7 +3,8 @@
 } 
 
  #sidebar{
-    height: 978px;
+    min-height: 100vh;
+    
     display:inline-block;
     
     
@@ -16,20 +17,21 @@
 }
 li{
    color: white;
-   padding-top: 30px;
+   padding-top: 20px;
 
 }
 li span{
     color: white;
     text-decoration: none;
-    padding: 12px;
+    padding: 10px;
 }
 li a:hover{
-    background-color: rgb(83, 94, 94);
-    box-shadow: 1px 2px 2px red;
+    background-color: rgb(39, 39, 92);
+    box-shadow: 1px 2px 3px white ;
     margin: 16px;
     margin-top: 10px;
     padding: 6px;
+    border-radius: 4px;
 }
 .list{
     margin: 1px;

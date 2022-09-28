@@ -17,6 +17,10 @@ export class SidebarComponent implements OnInit {
   ngOnInit(): void {
     // this.primengConfig.ripple = true;
     this.authservice1.visibleSidebar1=true;
+  //   var that = this;
+  //  setTimeout(function(){
+  //    that.authservice1.visibleSidebar1 = true   
+  // },5000);
   }
 
 }

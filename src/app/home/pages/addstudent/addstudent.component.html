@@ -1,54 +1,51 @@
-
-<div class="surface-card p-4 mt-2  shadow-3 border-round w-full lg:w-8" id="maindiv" *ngIf="auth.visibleSidebar1">
+<div class="card "> 
+<div class="surface-card align-content-center p-4 mt-2   shadow-3 border-round w-full lg:w-7 " id="maindiv" *ngIf="auth.visibleSidebar1">
     <div class="text-center mb-5">
         <img src="https://cdn4.vectorstock.com/i/1000x1000/40/68/student-logo-graduation-logo-vector-29014068.jpg" alt="Image" height="75" class="mb-3">
         <div class="text-900 text-3xl font-medium mb-3">Student Details</div>
     </div>
  <form [formGroup]="studentFrom" #student="ngForm" (ngSubmit)="submitstudentdata()" >
-    <div class="formgrid grid ml-1">
-          <div class="field col12 m-1 ">
-             <div class="p-inputgroup">
-                 <input  type="text"  pInputText class="form-control w-27rem mb-3 " placeholder="Student id" formControlName="student_id" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('student_id')?.invalid }">
-             </div>
-             <div class="student" *ngIf="student.submitted && studentFrom.get('student_id')?.invalid"  > Student id is required</div>
-
-          </div> 
-        <div class="field col12 m-1">
-            <div class="p-inputgroup ">
-           <input  type="text" pInputText class="form-control w-27rem mb-3" placeholder="Student name" formControlName="student_name" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('student_name')?.invalid|| studentFrom.get('student_name')?.touched && studentFrom.get('student_name')?.invalid}">
-             </div>
-             <div class="student" *ngIf="student.submitted && studentFrom.get('student_name')?.invalid"> Student name is required</div>
-             <div class="student" *ngIf="studentFrom.get('student_name')?.errors?.['maxlength']">student name should be less then 8 charecter</div>
-
+    <div class="formgrid grid ">
+          
+        <div class="field col12 md:col-6">
+          <label for="id">Student Id</label>
+          <input id="id" type="number" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"  formControlName="student_id" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('student_id')?.invalid ||  studentFrom.get('student_id')?.touched && studentFrom.get('student_id')?.invalid }">
+          <div class="student"  *ngIf="student.submitted && studentFrom.get('student_id')?.invalid || studentFrom.get('student_id')?.touched &&studentFrom.get('student_id')?.invalid"> Student id is required</div>
         </div>
-        <div class="field col12 m-1">
-            <div class="p-inputgroup mt-2 ">
-                <input  type="text" pInputText class="form-control w-27rem mb-3 " placeholder="Student profile" formControlName="student_profile" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('student_profile')?.invalid|| studentFrom.get('student_profile')?.touched && studentFrom.get('student_profile')?.invalid}">
-            </div>
-            <div class="student" *ngIf="student.submitted && studentFrom.get('student_profile')?.invalid"> Student name is required</div>
-
-         </div> 
-       <div class="field col12 m-1">
-           <div class="p-inputgroup mt-2">
-          <input  type="text" pInputText class="form-control w-27rem mb-3" placeholder="Mobile number" formControlName="mobile" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('mobile')?.invalid|| studentFrom.get('mobile')?.touched && studentFrom.get('mobile')?.invalid}">
-            </div>
-            <div class="student" *ngIf="student.submitted && studentFrom.get('mobile')?.invalid"> Student name is required</div>
-
-       </div>
-       <div class="p-inputgroup mt-2">
-        <input  type="text" pInputText class="form-control w-full mb-3" placeholder="Email.........." formControlName="email" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('email')?.invalid|| studentFrom.get('email')?.touched && studentFrom.get('email')?.invalid}">
-          </div>
-        <div class="student" *ngIf="student.submitted && studentFrom.get('email')?.invalid"> Student name is required</div>
-
-          <div class="p-inputgroup mt-2">
-            <input  type="text" pInputText class="form-control w-full mb-3" placeholder="Address......" formControlName="address" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('address')?.invalid|| studentFrom.get('address')?.touched && studentFrom.get('address')?.invalid}">
-         </div>
-        <div class="student" *ngIf="student.submitted && studentFrom.get('address')?.invalid"> Student name is required</div>
-
+      <div class="field col12 md:col-6">
+          <label for="name">Student Name</label>
+          <input id="name" type="text" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"  formControlName="student_name" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('student_id')?.invalid ||  studentFrom.get('student_name')?.touched && studentFrom.get('student_name')?.invalid }">
+             <div class="student"  *ngIf="student.submitted && studentFrom.get('student_name')?.invalid || studentFrom.get('student_name')?.touched &&studentFrom.get('student_name')?.invalid"> Student name is required</div>
         </div>
-      <div class="pb-2">
-        <button type="submit" pButton pRipple label="Add student" icon="pi pi-user" class="w-full ml-1 mt-2"></button>
+      <div class="field col12 md:col-6">
+        <label for="profile">Student Profile</label>
+        <input id="profile" type="text" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="student_profile" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('student_profile')?.invalid ||  studentFrom.get('student_profile')?.touched && studentFrom.get('student_profile')?.invalid }">
+             <div class="student"  *ngIf="student.submitted && studentFrom.get('student_profile')?.invalid || studentFrom.get('student_profile')?.touched &&studentFrom.get('student_profile')?.invalid"> Student profile is required</div>
+      </div>
+    <div class="field col12 md:col-6">
+        <label for="mobile">Mobile Number</label>
+        <input id="mobile" type="number" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="mobile" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('mobile')?.invalid ||  studentFrom.get('mobile')?.touched && studentFrom.get('mobile')?.invalid }">
+             <div class="student"  *ngIf="student.submitted && studentFrom.get('mobile')?.invalid || studentFrom.get('mobile')?.touched &&studentFrom.get('mobile')?.invalid"> Mobile Number is required</div>
+      </div>
+    <div class="field col-12">
+      <label for="email">Email</label>
+      <input id="email" type="email" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="email" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('email')?.invalid ||  studentFrom.get('email')?.touched && studentFrom.get('email')?.invalid }">
+             <div class="student"  *ngIf="student.submitted && studentFrom.get('email')?.invalid || studentFrom.get('email')?.touched &&studentFrom.get('email')?.invalid"> Email id is required</div>
+    </div>
+
+
+      <div class="field col-12">
+          <label for="address">Address</label>
+          <textarea id="address" type="text" rows="4" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="address" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('address')?.invalid ||  studentFrom.get('address')?.touched && studentFrom.get('address')?.invalid }"></textarea>
+             <div class="student"  *ngIf="student.submitted && studentFrom.get('address')?.invalid || studentFrom.get('address')?.touched &&studentFrom.get('address')?.invalid"> Address is required</div>
+  
+        </div>
+      <div class="field col-12">
+        <button type="submit" pButton pRipple label="Add student" icon="pi pi-user" class="w-full  mt-2"></button> 
+      
+      </div>
     </div>
      
  </form>
+</div>
 </div>

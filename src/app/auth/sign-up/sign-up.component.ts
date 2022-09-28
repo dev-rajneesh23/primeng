@@ -28,12 +28,15 @@ export class SignUpComponent implements OnInit {
     }),
     {updateOn:'submit'}
     this.auth.isLoggedin=true;
+    this.auth.visibleSidebar1=false;
 
   }
   signup(){
 
+
     if(this.signupForm.valid)
-    {
+    { 
+     
       this.data = this.signupForm.value;
       this.auth.SignUp(this.data.email,this.data.password )
      this.router.navigate(['/verify-email']);

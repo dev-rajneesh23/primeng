@@ -136,7 +136,7 @@ export class AuthService implements OnInit{
 
     GoogleAuth() {
       return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-        this.router.navigate(['studentlist']);
+        this.router.navigate(['/studentform']);
       });
     }
 
@@ -144,7 +144,7 @@ export class AuthService implements OnInit{
       return this.fireauth
         .signInWithPopup(provider)
         .then((result) => {
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(['/studentform']);
           this.SetUserData(result.user);
         })
         .catch((error) => {

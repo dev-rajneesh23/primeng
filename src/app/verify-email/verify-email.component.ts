@@ -12,6 +12,7 @@ export class VerifyEmailComponent implements OnInit {
   constructor(public authservice:AuthService) { }
 
   ngOnInit(): void {
+    this.authservice.visibleSidebar1=false;
   }
 
 }
