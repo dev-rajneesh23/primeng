@@ -28,6 +28,9 @@ import { StudentListComponent } from './home/pages/student-list/student-list.com
 import {TableModule} from 'primeng/table';
 import { EditStudentComponent } from './home/pages/edit-student/edit-student.component';
 import { LoginComponent } from './auth/login/login.component';
+import { NavbarComponent } from './home/navbar/navbar.component';
+import {ToggleButtonModule} from 'primeng/togglebutton';
+
 
 
 
@@ -40,6 +43,7 @@ import { LoginComponent } from './auth/login/login.component';
     AddstudentComponent,
     StudentListComponent,
     EditStudentComponent,
+    NavbarComponent,
     // LoginComponent
   ],
   imports: [
@@ -60,7 +64,8 @@ import { LoginComponent } from './auth/login/login.component';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     NgxPaginationModule,
-    TableModule
+    TableModule,
+    ToggleButtonModule
     
   ],
   

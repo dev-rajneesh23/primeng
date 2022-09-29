@@ -17,13 +17,14 @@ export class AuthService implements OnInit{
   gfg:boolean=true;
 
  data:any=[];
+  user: any;
   constructor(public fireauth:AngularFireAuth , ngzone:NgZone , public router:Router , public firestore:AngularFirestore,private primengConfig: PrimeNGConfig) 
       { 
 
         this.fireauth.authState.subscribe((user) => {
           if (user) {
             this.userdata.push(user)
-            localStorage.setItem('user', JSON.stringify(this.userdata));
+           this.user =  localStorage.setItem('user', JSON.stringify(this.userdata));
            
           } else {
             localStorage.setItem('user', 'null');
@@ -39,7 +40,8 @@ export class AuthService implements OnInit{
   ngOnInit(): void {
     this.fireauth.authState.subscribe((user) => {
       if (user) {
-        this.userdata.push(user);
+        // this.userdata.push(user);
+        this.userdata= user;
         // this.data =  JSON.parse(localStorage.getItem('user')!);
         // this.data.push(user);
         // localStorage.setItem('data', JSON.stringify(this.data));
@@ -114,8 +116,8 @@ export class AuthService implements OnInit{
   SignOut() {
     return this.fireauth
     .signOut().then(() => {
-      localStorage.removeItem('user');
-      this.router.navigate(['/']);
+        localStorage.removeItem('user');
+        this.router.navigate(['/']);
     });
   }
 
@@ -129,6 +131,8 @@ export class AuthService implements OnInit{
         window.alert(error);
       });
     }
+
+    // islogged in 
     get isLoggedIn(): boolean {
       const user = JSON.parse(localStorage.getItem('user')!);
       return user !== null && user.emailVerified !== false ? true : false;
@@ -136,15 +140,15 @@ export class AuthService implements OnInit{
 
     GoogleAuth() {
       return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-        this.router.navigate(['/studentform']);
+        this.router.navigate(['/dashboard']);
       });
-    }
+  }
 
     AuthLogin(provider: any) {
       return this.fireauth
         .signInWithPopup(provider)
         .then((result) => {
-          this.router.navigate(['/studentform']);
+          this.router.navigate(['/dashboard']);
           this.SetUserData(result.user);
         })
         .catch((error) => {
@@ -152,3 +156,4 @@ export class AuthService implements OnInit{
         });
     }
 }
+

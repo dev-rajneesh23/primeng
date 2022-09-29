@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
+declare let $: any;
+
 import { AuthService } from './auth/authservice/auth.service';
 
 @Component({
@@ -8,5 +10,7 @@ import { AuthService } from './auth/authservice/auth.service';
 })
 export class AppComponent {
   title = 'myproject3';
+  sideNavStatus=false;
+
   constructor(public sidebar:AuthService){}
 }

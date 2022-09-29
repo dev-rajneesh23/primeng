@@ -13,3 +13,9 @@
     font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
    }
+
+   @media only screen and (max-width:520px){
+     .formgrid{
+         justify-content: center;
+     }
+   }

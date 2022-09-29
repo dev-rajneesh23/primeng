@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { StudentService } from '../studentservice/student.service';
 import { ToastrService } from 'ngx-toastr';
 import  {Student}   from '../student';
-import { Customer, Representative } from '../student';
+// import {  Representative } from '../student';
+import { Table } from 'primeng/table';
 
 
 
@@ -14,15 +15,16 @@ import { Customer, Representative } from '../student';
 export class StudentListComponent implements OnInit {
 
   // table layout
-  customers!: Student[];
+  students!: Student[];
 
-  selectedCustomers!: Student[];
+  selectedStudents!: Student[];
 
-  representatives!: Representative[];
+  // representatives!: Representative[];
 
   statuses!: any[];
 
   loading: boolean = true;
+  
 
   activityValues: number[] = [0, 100];
 

@@ -13,17 +13,18 @@
  <div class="list ">
    <ul>
       <ul >
-    <li class="pi pi-home"><a routerLink="/dashboard/contact" ><i></i> <span>Home</span></a></li><br><br>
-    <li class="pi pi-table"><a routerLink="/studentform" ><i></i> <span>Add Student</span></a></li><br><br>
+    <!-- <li class="pi pi-home"><a routerLink="/dashboard/contact" ><i></i> <span>Home</span></a></li><br><br> -->
+    <li class="pi pi-user"><a routerLink="/studentform" ><i></i> <span>Add Student</span></a></li><br><br>
     <li class="pi pi-table"><a routerLink="/studentlist" ><i></i> <span>student table</span></a></li><br><br>
-    <li class="pi pi-list"><a routerLink="/dashboard/student"><i></i> <span>signup data</span></a></li><br><br>
-    <li class="pi pi-user"><a routerLink="/contact" ><i></i> <span>Contact</span></a></li><br><br>
+    <li class="pi pi-table"><a routerLink="/dashboard/student"><i></i> <span>signup data</span></a></li><br><br>
+    <!-- <li class="pi pi-user"><a routerLink="/contact" ><i></i> <span>Contact</span></a></li><br><br> -->
   </ul>
     </ul>
  </div>
-   <div>
-  <button type="button" pButton class=" p-button-outlined p-button-help p-2 m-1 ml-4" id="logout" style="color:white; " (click)="authservice1.SignOut()" (click)="authservice1.visibleSidebar1 = false">Log out</button>
- 
+   <div >
+  <!-- <button type="button" pButton class=" p-button-outlined p-button-help p-2 m-1 ml-4" id="logout" style="color:white; " (click)="authservice1.SignOut()" (click)="authservice1.visibleSidebar1 = false">Log out</button> -->
+  <li class="pi pi-sign-out ml-7"><a (click)="authservice1.SignOut()" (click)="authservice1.visibleSidebar1 = false"><i></i> <span>Sign-out</span></a></li><br>
+
    </div>
    </div>
  <!-- </div> -->

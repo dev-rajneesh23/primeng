@@ -36,8 +36,8 @@ export class AddstudentComponent implements OnInit {
   }
   studentvalidation(){
     this.studentFrom = this.fb.group({
-      student_id:["",[Validators.required]],
-      student_name:["",[Validators.required,Validators.maxLength(8)]],
+      student_id:["",[Validators.required,Validators.maxLength(6)]],
+      student_name:["",[Validators.required,Validators.maxLength(20)]],
       student_profile:["",[Validators.required,Validators.maxLength(8)]],
       mobile:["",[Validators.required,Validators.maxLength(10)]],
       email:["",[Validators.required,Validators.email]],

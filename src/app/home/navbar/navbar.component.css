@@ -1,0 +1,12 @@
+.navbar{
+    display: none;
+}
+@media  only screen and  (max-width:768px){
+    .navbar{
+        display: block;
+    }
+}
+#navbar{
+    background-color: rgb(39, 39, 92);
+
+}

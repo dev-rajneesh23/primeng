@@ -1,8 +1,8 @@
-<div class="card "> 
+<!-- <div class="card ">  -->
 <div class="surface-card align-content-center p-4 mt-2   shadow-3 border-round w-full lg:w-7 " id="maindiv" *ngIf="auth.visibleSidebar1">
     <div class="text-center mb-5">
         <img src="https://cdn4.vectorstock.com/i/1000x1000/40/68/student-logo-graduation-logo-vector-29014068.jpg" alt="Image" height="75" class="mb-3">
-        <div class="text-900 text-3xl font-medium mb-3">Student Details</div>
+        <div class="text-900 text-3xl font-medium mb-3" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;">Student Details</div>
     </div>
  <form [formGroup]="studentFrom" #student="ngForm" (ngSubmit)="submitstudentdata()" >
     <div class="formgrid grid ">
@@ -27,20 +27,20 @@
         <input id="mobile" type="number" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="mobile" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('mobile')?.invalid ||  studentFrom.get('mobile')?.touched && studentFrom.get('mobile')?.invalid }">
              <div class="student"  *ngIf="student.submitted && studentFrom.get('mobile')?.invalid || studentFrom.get('mobile')?.touched &&studentFrom.get('mobile')?.invalid"> Mobile Number is required</div>
       </div>
-    <div class="field col-12">
+    <div class="field col12 md:col-12">
       <label for="email">Email</label>
       <input id="email" type="email" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="email" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('email')?.invalid ||  studentFrom.get('email')?.touched && studentFrom.get('email')?.invalid }">
              <div class="student"  *ngIf="student.submitted && studentFrom.get('email')?.invalid || studentFrom.get('email')?.touched &&studentFrom.get('email')?.invalid"> Email id is required</div>
     </div>
 
-
+ 
       <div class="field col-12">
           <label for="address">Address</label>
-          <textarea id="address" type="text" rows="4" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="address" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('address')?.invalid ||  studentFrom.get('address')?.touched && studentFrom.get('address')?.invalid }"></textarea>
+          <textarea id="address" type="text" rows="3" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="address" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('address')?.invalid ||  studentFrom.get('address')?.touched && studentFrom.get('address')?.invalid }"></textarea>
              <div class="student"  *ngIf="student.submitted && studentFrom.get('address')?.invalid || studentFrom.get('address')?.touched &&studentFrom.get('address')?.invalid"> Address is required</div>
   
         </div>
-      <div class="field col-12">
+      <div class="field col-12 ">
         <button type="submit" pButton pRipple label="Add student" icon="pi pi-user" class="w-full  mt-2"></button> 
       
       </div>
@@ -48,4 +48,4 @@
      
  </form>
 </div>
-</div>
+<!-- </div> -->
