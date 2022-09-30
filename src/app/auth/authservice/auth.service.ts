@@ -67,7 +67,7 @@ export class AuthService implements OnInit{
         this.SetUserData(result.user);
         this.fireauth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/st']);
           }
         });
       })

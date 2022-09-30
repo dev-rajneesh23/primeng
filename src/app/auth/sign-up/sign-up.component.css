@@ -34,6 +34,10 @@ h2{
 button{
     width: 98%;
 }
+.validation{
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
 @media  only screen and  (max-width:768px) {
     #maindiv{
     margin-left: 240px;
