@@ -14,6 +14,7 @@ export class AuthService implements OnInit{
  isLoggedin:boolean=false;
  userdata:any=[];
  visibleSidebar1:boolean=false;
+ navbar:boolean=false;
   gfg:boolean=true;
 
  data:any=[];
@@ -116,7 +117,10 @@ export class AuthService implements OnInit{
   SignOut() {
     return this.fireauth
     .signOut().then(() => {
-        localStorage.removeItem('user');
+        setTimeout(function(){
+        localStorage.clear();
+          window.location.reload();
+        },100);
         this.router.navigate(['/']);
     });
   }
@@ -141,6 +145,8 @@ export class AuthService implements OnInit{
     GoogleAuth() {
       return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
         this.router.navigate(['/dashboard']);
+        this.visibleSidebar1 = true;
+        
       });
   }
 

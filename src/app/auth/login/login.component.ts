@@ -22,7 +22,8 @@ export class LoginComponent implements OnInit {
    this.userdata = this.loginFrom;
    this.authservice.visibleSidebar1 =false;
    this.authservice.isLoggedin=false;
-   
+   this.authservice.navbar =false;
+
   }
     // onsubmit(){
     //   debugger

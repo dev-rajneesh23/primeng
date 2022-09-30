@@ -25,5 +25,5 @@ export class SidebarComponent implements OnInit {
   //    that.authservice1.visibleSidebar1 = true   
   // },5000);
   }
-
+  
 }

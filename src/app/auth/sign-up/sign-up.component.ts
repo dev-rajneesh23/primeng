@@ -29,6 +29,7 @@ export class SignUpComponent implements OnInit {
     {updateOn:'submit'}
     this.auth.isLoggedin=true;
     this.auth.visibleSidebar1=false;
+    this.auth.navbar=false;
 
   }
   signup(){

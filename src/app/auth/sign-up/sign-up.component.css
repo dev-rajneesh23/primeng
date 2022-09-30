@@ -1,5 +1,5 @@
-.card{
-    background-image:url("https://images.unsplash.com/photo-1497005367839-6e852de72767?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1467&q=80");
+#maindiv{
+    background-image:url("https://images.unsplash.com/photo-1597839219216-a773cb2473e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80");
     min-height: 100vh;
     width: 100%;
     margin: 0;
@@ -7,28 +7,16 @@
     
     
 }
-.containe{
-    width: 100%;
-    /* border: solid red 2px; */
-}
-/* .card-container{
-    margin: auto;
-    background-color: white;
-    height: 400px;
-    width: 400px;
-    padding-top: 0px;
-    padding-left: 50px;
-    
-} */
+
+
 .img-login img{
     height: 80px;
     width: 80px;
     
 }
-
-
-
-
+label{
+    color: white;
+}
 h2{
     color: white;
 }
@@ -36,6 +24,27 @@ h2{
 .loginpage{
     background-color: rgb(93, 92, 92);
 }
-.mt-1{
-    color: rgb(209, 8, 8); font-size: 15px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.signform{
+    border: 2px red solid;
+    margin: auto;
+}
+.formgrid{
+    margin: auto;
+}
+button{
+    width: 98%;
+}
+@media  only screen and  (max-width:768px) {
+    #maindiv{
+    margin-left: 240px;
+    }
+}
+@media only screen and (max-width:582px){
+    .formgrid{
+        justify-content: center;
+    }
+  }
+  .validation{
+    color: rgb(184, 9, 9);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }

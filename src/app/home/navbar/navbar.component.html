@@ -9,7 +9,7 @@
       <span class="text-muted">Toggleable via the navbar brand.</span>
     </div>
   </div>
-  <nav class="navbar navbar-dark" id="navbar">
+  <nav class="navbar navbar-dark" id="navbar" *ngIf="auth.navbar">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button"  (click)="sideNav()" >
         <span class="navbar-toggler-icon"></span>

@@ -62,12 +62,14 @@
     </table>
     
     </div> -->
-    
-    <p-table #dt [value]="students" [(selection)]="selectedStudents" [rowHover]="true"
-    [rows]="5" [showCurrentPageReport]="true" [rowsPerPageOptions]="[5]"  responsiveLayout="scroll"
+    <div class="card">
+    <p-table #dt [value]="Student" [(selection)]="selectedStudents" [rowHover]="true" 
+    [rows]="5" [showCurrentPageReport]="true" [rowsPerPageOptions]="[5]" 
     [paginator]="true" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
     [filterDelay]="0" [globalFilterFields]="['student_id','student_name','student_profile','mobile','email','address']">
     <ng-template pTemplate="caption">
+<button type="button" class="p-button-primary p-button-sm mr-2 p-2 "  style="float: right;" pButton routerLink="/studentform"> go to Add student</button>
+
         <div class="table-header">
             List of Students
             <span class="p-input-icon-left">
@@ -82,7 +84,7 @@
             <th>student id</th>
             <th>Student name</th>
             <th>Student profile</th>
-            <th>mobile number</th>
+            <th>mobile Number</th>
             <th>email</th>
             <th>address</th>
             <th>Action</th>
@@ -98,8 +100,8 @@
             <td>{{Student.email}}</td>
             <td>{{Student.address}}</td>
             <td>
-                <button type="button" pButton class="p-button-help p-button-sm m-1"  routerLink="/edit/{{Student.$key}}" >Update</button>&nbsp;
-                <button type="button" class="p-button-danger p-button-sm m-1"  pButton (click)="deletestudent(Student)"> Delete</button>
+                <button type="button" pButton class="p-button p-button-sm m-1" icon="pi pi-user-edit"  routerLink="/edit/{{Student.$key}}" ></button>&nbsp;
+                <button type="button" pButton class="p-button-danger p-button-sm m-1" icon="pi pi-trash" pButton (click)="deletestudent(Student)"></button>
             </td>
         </tr>
     </ng-template>
@@ -132,4 +134,7 @@
         </tr>
     </ng-template>
 </p-table>
+
+</div>
+
 

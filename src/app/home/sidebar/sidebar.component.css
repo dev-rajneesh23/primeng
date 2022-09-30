@@ -13,7 +13,6 @@
 
 .image{
     display:inline-block;
-
 }
 li{
    color: white;
@@ -36,11 +35,16 @@ li a:hover{
 .list{
     margin: 1px;
 }
-img{
+.image{
     height: 100px;
     width: 233px;
     margin-left: 4px;
     margin-top: 1px;
+}
+.img1{
+    height: 50px;
+    width: 50px;
+    
 }
 .list{
     margin-top: 50px;

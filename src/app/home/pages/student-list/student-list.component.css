@@ -1,3 +1,6 @@
 .surface-card{
     display: inline-block;
 }
+tr{
+    background-color: rgb(67, 41, 8);
+}

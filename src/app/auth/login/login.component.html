@@ -1,34 +1,4 @@
-<!-- <div class="card">
-    <div class="formgrid grid">
-        
-        <div class="img-login">
-            <img src="https://images-platform.99static.com/vXYHmlze-JGsb4JSxeNyMMUAumo=/500x500/top/smart/99designs-contests-attachments/1/1974/attachment_1974284" alt="">
-        </div>
-         < class="login-box">
-        <h3>Login Page</h3>
-     <div class="field">
-        <span class="p-float-label">
-            <input id="float-input" type="text" pInputText> 
-            <label for="float-input">Email</label>
-        </span>
-     </div>
-    <br>
-    <br>
-     <div class="field">
-        <span class="p-float-label">
-            <input id="float-input" type="password" pInputText> 
-            <label for="float-input">password</label>
-        </span>
-     </div><br>
-     <div>
-        <button pButton type="button"  class="p-button-help">Login</button> &nbsp; 
-     </div> <br>
-     <div><span>don't have an account?</span>&nbsp;&nbsp;
-        <a routerLink="/signup"  style="color:rgb(15, 105, 141);">Sign-up</a>
-    </div>
-    
-  </div>
-</div> -->
+
 <div class="card login-page h-auto" *ngIf="authservice.isLoggedin==false" >
   <div class=" mt-6 " >
     <div id="div2" class="flex flex-row flex-wrap card-container white-container justify-content-center ">
@@ -65,7 +35,7 @@
                    <span>Not a member?</span>&nbsp;&nbsp;
                    <a  routerLink="/signup"  style="color:rgb(15, 105, 141); text-decoration: none;">Sign-up</a> 
                 </div> <br>
-                <button pButton type="button"  class="p-button-outlined" (click)="authservice.GoogleAuth()" (click)="authservice.visibleSidebar1 = true">Sign-in with Google</button>
+                <button pButton type="button"  class="p-button-outlined" (click)="authservice.GoogleAuth()" (click)="authservice.visibleSidebar1 = false">Sign-in with Google</button>
             </form>
             </div>
     

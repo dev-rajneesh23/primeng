@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { SelectItem, PrimeNGConfig} from 'primeng/api';
+import { AuthService } from 'src/app/auth/authservice/auth.service';
 
 
 @Component({
@@ -13,10 +14,11 @@ export class NavbarComponent implements OnInit {
   sideNavStatus=false;
   checked: boolean=false;
 
-  constructor(private primengConfig: PrimeNGConfig) { }
+  constructor(private primengConfig: PrimeNGConfig , public auth:AuthService) { }
 
   ngOnInit(): void {
     this.primengConfig.ripple = true;
+    this.auth.navbar =true;
   }
   sideNav()
   {

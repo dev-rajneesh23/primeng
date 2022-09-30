@@ -6,6 +6,7 @@ import { SignUpComponent } from './sign-up.component';
 import {  ButtonModule } from 'primeng/button';
 import {InputTextModule} from 'primeng/inputtext';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthService } from '../authservice/auth.service';
 
 
 
@@ -21,4 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ]
 })
-export class SignUpModule { }
+export class SignUpModule {
+
+
+ }

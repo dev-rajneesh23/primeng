@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
    this.authservice1.visibleSidebar1 =true;
+   this.authservice1.navbar=true;
   }
   sidebar(){
     // this.authservice1.sidebar=true;

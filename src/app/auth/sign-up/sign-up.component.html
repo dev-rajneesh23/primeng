@@ -58,7 +58,7 @@
   </div>
    -->
    
-   <div class="card signup" >
+   <!-- <div class="card signup" >
     <div class=" mt-2 ">
       <div id="div2 " class="flex flex-row flex-wrap card-container white-container justify-content-center h-25rem">
           <div id="div3" class="flex  align-items-center justify-content-center w-25rem h-30rem bg-black-500 font-bold text-white border-round m-2 ">
@@ -72,8 +72,8 @@
                     
                     <div class="field">
                        <span class="p-float-label">
-                           <input  type="text" class="form-control" pInputText class="p-inputtext" name="username"  formControlName="username" [ngClass]="{'is-invalid':register.submitted && signupForm.get('username')?.invalid}"> 
-                           <label for="float-input">Username</label>
+                           class="form-control" pInputText class="p-inputtext" name="username"  formControlName="username" [ngClass]="{'is-invalid':register.submitted && signupForm.get('username')?.invalid}"> 
+                           <label for="float-inp <input  type="text"ut">Username</label>
                            <div class="mt-1" *ngIf="register.submitted && signupForm.get('username')?.invalid || signupForm.get('username')?.invalid && signupForm.get('username')?.touched ">username is required</div>
                        </span>
                     </div>
@@ -85,7 +85,6 @@
                           <input id="float-input1" class="form-control" type="email" pInputText class="p-inputtext"  formControlName="email" #email [ngClass]="{'is-invalid':register.submitted && signupForm.get('email')?.invalid}"> 
                           <label for="float-input1">Email</label>
                           <div class="mt-1" *ngIf="register.submitted && signupForm.get('email')?.invalid || signupForm.get('email')?.invalid && signupForm.get('email')?.touched " >email is required</div>
-                          <div *ngIf="signupForm.get('email')?.errors?.['pattern']" style="color: red;">saaddsdd</div>
                         </span>
                    </div>
                   <br>
@@ -115,4 +114,52 @@
       </div>
     </div>
   </div>
+   -->
+   
+   <!-- <div class="card ">  -->
+<div class="card align-content-center p-4 mt-2   shadow-3 border-round w-full lg:w-full " id="maindiv" *ngIf="this.auth.visibleSidebar1==false">
   
+<form [formGroup]="signupForm" #student="ngForm" (ngSubmit)="signup()" class="mt-8" >
+  <!-- <div class="signform w-7 mt-4"> -->
+     <div class="text-center mb-1">
+      <img src="https://cdn4.vectorstock.com/i/1000x1000/40/68/student-logo-graduation-logo-vector-29014068.jpg" alt="Image" height="75" class="mb-3">
+         <div class="text-900 text-3xl font-medium mb-3" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;"><h2>Sign-up</h2></div>
+   </div>
+  <div class="formgrid grid lg:w-4   ">
+        
+      <div class="field col12 md:col-6">
+        <label for="id">Username</label>
+        <span class="p-input-icon-left"><i class="pi pi-user"></i>
+        <input id="id" icon="pi pi-user"  type="text" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"  formControlName="username" [ngClass]="{'is-invalid':student.submitted && signupForm.get('username')?.invalid ||  signupForm.get('username')?.touched && signupForm.get('username')?.invalid }"></span>
+        <div class="validation"  *ngIf="student.submitted && signupForm.get('username')?.invalid || signupForm.get('username')?.touched &&signupForm.get('username')?.invalid"> Username is required</div>
+      </div>
+    <div class="field col12 md:col-6">
+        <label for="name">Email</label>
+        <span class="p-input-icon-left"><i class="pi pi-envelope"></i>
+        <input id="name"  type="text" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full"  formControlName="email" [ngClass]="{'is-invalid':student.submitted && signupForm.get('email')?.invalid ||  signupForm.get('email')?.touched && signupForm.get('email')?.invalid }">
+        </span>
+           <div class="validation"  *ngIf="student.submitted && signupForm.get('email')?.invalid || signupForm.get('email')?.touched &&signupForm.get('email')?.invalid"> Email Id is required</div>
+      </div>
+    <div class="field col12 md:col-6">
+      <label for="profile">Password</label>
+      <span class="p-input-icon-left"><i class="pi pi-lock"></i>
+      <input id="profile" type="text" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="password" [ngClass]="{'is-invalid':student.submitted && signupForm.get('password')?.invalid ||  signupForm.get('password')?.touched && signupForm.get('password')?.invalid }">
+        </span>
+      <div class="validation"  *ngIf="student.submitted && signupForm.get('password')?.invalid || signupForm.get('password')?.touched &&signupForm.get('password')?.invalid"> Password is required</div>
+    </div>
+  <div class="field col12 md:col-6">
+      <label for="mobile">Confirm Password</label>
+      <span class="p-input-icon-left"><i class="pi pi-lock"></i>
+      <input id="mobile" type="text" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="confirm_password" [ngClass]="{'is-invalid':student.submitted && signupForm.get('confirm_password')?.invalid ||  signupForm.get('confirm_password')?.touched && signupForm.get('confirm_password')?.invalid }">
+        </span>     
+      <div class="validation"  *ngIf="student.submitted && signupForm.get('confirm_password')?.invalid || signupForm.get('confirm_password')?.touched &&signupForm.get('confirm_password')?.invalid"> Confirm password is required</div>
+    </div>
+  
+    <div class="field col-12 ">
+      <button type="button" pButton  label="Sign-up" icon="pi pi-user" class="p-button-outlined  p-button-sm  mt-3"></button> 
+    
+    </div>
+  </div>
+<!-- </div> -->
+</form>
+</div>
