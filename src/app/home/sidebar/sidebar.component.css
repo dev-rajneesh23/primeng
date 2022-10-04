@@ -47,7 +47,7 @@ li a:hover{
     
 }
 .list{
-    margin-top: 50px;
+    margin-top: 25px;
 }
 li a{
     text-decoration: none;
@@ -56,3 +56,13 @@ li a{
       #sidebarr{
         background-color: rgb(7, 7, 109);
       }
+      .user{
+        margin-left: 53px;
+        color: rgb(168, 159, 159);
+      }
+      
+
+    ::ng-deep .p-image-preview-container img {
+        cursor: pointer;
+        border-radius: 50%!important;
+    }

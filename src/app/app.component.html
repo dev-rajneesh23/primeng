@@ -12,7 +12,7 @@
         <app-sidebar [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav':sideNavStatus}"></app-sidebar>
     </div>
         
-    <div style="width: 100%; height: 100vh;">
+    <div style="width: 100%; height: 100vh;" class="min-h-screen">
         
         
         <app-navbar (sideToggle)="sideNavStatus = $event;"></app-navbar>

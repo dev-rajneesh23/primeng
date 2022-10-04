@@ -18,14 +18,16 @@ export class AuthService implements OnInit{
   gfg:boolean=true;
 
  data:any=[];
-  user: any;
+  user1: any;
   constructor(public fireauth:AngularFireAuth , ngzone:NgZone , public router:Router , public firestore:AngularFirestore,private primengConfig: PrimeNGConfig) 
       { 
 
         this.fireauth.authState.subscribe((user) => {
           if (user) {
+            this.user1 = user;
+            console.log(this.user1);
             this.userdata.push(user)
-           this.user =  localStorage.setItem('user', JSON.stringify(this.userdata));
+            localStorage.setItem('user', JSON.stringify(this.userdata));
            
           } else {
             localStorage.setItem('user', 'null');
@@ -39,22 +41,22 @@ export class AuthService implements OnInit{
 
  
   ngOnInit(): void {
-    this.fireauth.authState.subscribe((user) => {
-      if (user) {
+    // this.fireauth.authState.subscribe((user) => {
+    //   if (user) {
         // this.userdata.push(user);
-        this.userdata= user;
+        // this.userdata= user;
         // this.data =  JSON.parse(localStorage.getItem('user')!);
         // this.data.push(user);
         // localStorage.setItem('data', JSON.stringify(this.data));
 
-        localStorage.setItem('user', JSON.stringify(this.userdata));
+    //     localStorage.setItem('user', JSON.stringify(this.userdata));
        
        
-      } else {
-        localStorage.setItem('user', 'null');
-        JSON.parse(localStorage.getItem('user')!);
-      }
-    });
+    //   } else {
+    //     localStorage.setItem('user', 'null');
+    //     JSON.parse(localStorage.getItem('user')!);
+    //   }
+    // });
 
 
     this.primengConfig.ripple = true;
@@ -67,7 +69,7 @@ export class AuthService implements OnInit{
         this.SetUserData(result.user);
         this.fireauth.authState.subscribe((user) => {
           if (user) {
-            this.router.navigate(['/st']);
+            this.router.navigate(['/dashboard']);
           }
         });
       })

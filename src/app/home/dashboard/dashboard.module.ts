@@ -10,6 +10,8 @@ import {TabViewModule} from 'primeng/tabview';
 // import { SidebarComponent } from '../sidebar/sidebar.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { StudentComponent } from '../pages/student/student.component';
+import {ImageModule}  from  'primeng/image';
+
 
 
 
@@ -30,6 +32,7 @@ import { StudentComponent } from '../pages/student/student.component';
     TabViewModule,
     SidebarModule,
     ButtonModule,
+    ImageModule
   ]
 })
 export class DashboardModule { }

@@ -31,9 +31,7 @@ h2{
 .formgrid{
     margin: auto;
 }
-button{
-    width: 98%;
-}
+/* / */
 .validation{
     color: red;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;

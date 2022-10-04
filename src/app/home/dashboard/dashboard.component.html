@@ -2,6 +2,22 @@
 <app-sidebar></app-sidebar>
 </div> -->
 <router-outlet></router-outlet>
+<ng-template pTemplate="end">
+    <p-image *ngIf="authservice1.isLoggedIn && authservice1.user1 as user; else elseBlock;"
+        src="{{(user.photoURL) ? user.photoURL : '../../../assets/images/dummy2.png'}}" height="40px"
+        width="40px" [preview]="true" pTooltip="Profile picture" tooltipPosition="bottom"></p-image>
+    <ng-template #elseBlock>
+        <p-image src="../assets/images/guest.png" alt="guestmode" class="rounded" height="40px" width="40px"
+            [preview]="true" pTooltip="Profile picture" tooltipPosition="bottom"></p-image>
+    </ng-template>
+</ng-template>
+
+
+
+
+
+
+
 
 
   

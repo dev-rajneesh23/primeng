@@ -9,20 +9,24 @@
        <img src="https://static.vecteezy.com/system/resources/thumbnails/008/075/444/small/the-logo-of-home-housing-residents-real-estate-with-a-concept-that-presents-rural-nature-with-a-touch-of-leaves-and-sunflowers-vector.jpg" alt="" class="image" >
     </div>
     <h3 class="m-5" style="color: white;">Dashboard</h3>
+    <div class=" ml-7"> <p-image  *ngIf="authservice1.isLoggedIn && authservice1.user1 as user;"
+      src="{{(user.photoURL) ? user.photoURL : '../../../../../assets/user1.jpg' }}" class="image2"
+      [preview]="true" pTooltip="Profile picture" tooltipPosition="bottom"></p-image>
+    </div><i> <h5 class="user" >User profile</h5></i>
  <div class="list ">
-   <ul>
-      <ul >
+   <ul class="ml-4">
+      
     <!-- <li class="pi pi-home"><a routerLink="/dashboard/contact" ><i></i> <span>Home</span></a></li><br><br> -->
     <li class="pi pi-user"><a routerLink="/studentform" ><i></i> <span>Add Student</span></a></li><br><br>
     <li class="pi pi-table"><a routerLink="/studentlist" ><i></i> <span>student table</span></a></li><br><br>
     <!-- <li class="pi pi-table"><a routerLink="/dashboard/student"><i></i> <span>signup data</span></a></li><br><br> -->
     <!-- <li class="pi pi-user"><a routerLink="/contact" ><i></i> <span>Contact</span></a></li><br><br> -->
-  </ul>
+  <li class="pi pi-sign-out "><a (click)="authservice1.SignOut()" (click)="authservice1.visibleSidebar1 = false"><i></i> <span>Sign-out</span></a></li><br>
+     
     </ul>
  </div>
    <div >
   <!-- <button type="button" pButton class=" p-button-outlined p-button-help p-2 m-1 ml-4" id="logout" style="color:white; " (click)="authservice1.SignOut()" (click)="authservice1.visibleSidebar1 = false">Log out</button> -->
-  <li class="pi pi-sign-out ml-7"><a (click)="authservice1.SignOut()" (click)="authservice1.visibleSidebar1 = false"><i></i> <span>Sign-out</span></a></li><br>
 
    </div>
    </div>

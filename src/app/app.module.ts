@@ -30,6 +30,7 @@ import { EditStudentComponent } from './home/pages/edit-student/edit-student.com
 import { LoginComponent } from './auth/login/login.component';
 import { NavbarComponent } from './home/navbar/navbar.component';
 import {ToggleButtonModule} from 'primeng/togglebutton';
+import {ImageModule}  from  'primeng/image';
 
 
 
@@ -65,7 +66,8 @@ import {ToggleButtonModule} from 'primeng/togglebutton';
     ToastrModule.forRoot(),
     NgxPaginationModule,
     TableModule,
-    ToggleButtonModule
+    ToggleButtonModule,
+    ImageModule
     
   ],
   

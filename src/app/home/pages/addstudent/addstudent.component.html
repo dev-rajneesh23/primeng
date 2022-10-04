@@ -21,6 +21,7 @@
         <label for="profile">Student Profile</label>
         <input id="profile" type="text" class="form-control text-base text-color surface-overlay p-2 border-1 border-solid surface-border border-round appearance-none outline-none focus:border-primary w-full" formControlName="student_profile" [ngClass]="{'is-invalid':student.submitted && studentFrom.get('student_profile')?.invalid ||  studentFrom.get('student_profile')?.touched && studentFrom.get('student_profile')?.invalid }">
              <div class="student"  *ngIf="student.submitted && studentFrom.get('student_profile')?.invalid || studentFrom.get('student_profile')?.touched &&studentFrom.get('student_profile')?.invalid"> Student profile is required</div>
+             
       </div>
     <div class="field col12 md:col-6">
         <label for="mobile">Mobile Number</label>
